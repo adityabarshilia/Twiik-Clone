@@ -11,6 +11,22 @@
 </head>
 <body>
 
+    <div id="formoverlay"></div>
+
+    <div id="form">
+        <div id="close"></div>
+        <form>
+            <h2>LOGIN</h2>
+            <input type="email" placeholder="Username or Email">
+            <input type="password" placeholder="Password">
+            <div><input type="checkbox" id="check"><span>Log in automatically next time</span></div>
+            <input type="submit" value="Login">
+            <p>or</p>
+            <a href="">Login with Facebook</a>
+            <p><a href="">Fogotten the password?</a> . <a href="account.html">Create account</a></p>
+        </form>
+    </div>
+
     <div class="header">
         <div class="logo">
             <a href="index.html"><img src="https://kcdn.twiikapp.com/images/logo.png" alt="logo"></a>
@@ -18,7 +34,7 @@
         <div class="nav">
             <a href="app.html">Get the app</a>
             <a href="contact.html">Contact</a>
-            <a href="login.html">Login</a>
+            <a id="loginbtn">Login</a>
             <a id="accbtn" href="account.html">Create account</a>
         </div>
     </div>

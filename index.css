@@ -5,6 +5,140 @@
   font-family: lato, Arial, Helvetica, sans-serif;
 }
 
+
+/* form overlay */
+
+#formoverlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11000;
+  display: none;
+  transition: all 1s ease-in-out;
+}
+
+/* form overlay */
+
+/* form */
+
+#form p{
+  font-size: 13px;
+}
+
+#form{
+  width: 450px;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 20000;
+  background-color: white;
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+
+#form form{
+  width: 83%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+}
+
+#form input{
+  padding-bottom: 10px;
+  border-width: 0 0 1px 0;
+  border-color: black;
+  margin-bottom: 20px;
+}
+#form input:focus, textarea:focus{
+  outline: none;
+}
+
+#form form h2{
+  font-size: 28px;
+  color: #000;
+  font-weight: normal;
+  line-height: 42px;
+  font-family: lato, Arial, Helvetica, sans-serif;
+  margin-bottom: 25px;
+}
+
+#form input[type = "submit"]{
+  background: #3cc6dc;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 15px;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+#form input[type = "submit"]:hover{
+  background: #2f9bac;
+  cursor: pointer;
+}
+
+#form form > a{
+  display: inline-block;
+  padding: 0px;
+  font-size: 15px;
+  color: #fff;
+  background: #3b5998 url(https://kcdn.twiikapp.com/images/facebook_icon.png) no-repeat 10px 10px;
+  border: none;
+  line-height: 40px;
+  border-radius: 10px;
+  width: 100%;
+  text-decoration: none;
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+
+#form form > a:hover{
+  background-color: #293d69;
+  text-decoration: none;
+}
+
+#form form p a{
+  color: #3bc6db;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+#form form p a:hover{
+  text-decoration: underline;
+}
+
+#form form > div{
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+#form form > div > input{
+  margin: 0px;
+}
+
+#form > div{
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background: transparent url(https://kcdn.twiikapp.com/images/fancybox/fancybox.png) -40px 0px;
+  cursor: pointer;
+}
+
+/* form */
+
 p{
   line-height: 25px;
 }
@@ -21,7 +155,7 @@ a{
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  z-index: 100000;
+  z-index: 10000;
   transition: all 0.2s ease-in-out;
 }
 
