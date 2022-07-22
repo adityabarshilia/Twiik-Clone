@@ -6,16 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="account.css">
   <link href='http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,550,600,700,800,900' rel='stylesheet' type='text/css'>
 </head>
-
 <body>
+<div id="formoverlay"></div>
 
-  <div id="formoverlay"></div>
-
-  <div id="form">
+<div id="form">
     <div id="close"></div>
     <form>
         <h2>LOGIN</h2>
@@ -27,7 +24,7 @@
         <a href="">Login with Facebook</a>
         <p><a href="">Fogotten the password?</a> . <a href="account.html">Create account</a></p>
     </form>
-  </div>
+</div>
 
     <div class="header">
         <div class="logo">
@@ -40,31 +37,28 @@
             <a id="accbtn" href="account.html">Create account</a>
         </div>
     </div>
-
-    <div class="bk">
-        <h2>Are you not a member?</h2>
-        <div>
-            <a class="btn2" href="">Create account</a>
-            <a class="btn3" href="">Get the app</a>
-        </div>
-    </div>
-
     <div class="wrapper">
-        <div class="section">
+        
             <div>
-                <h1 class="conH1">CONTACT TWIIK</h1>
-                <hr>
-                <p>If you want to contact us, please use the form below or send an e-mail to appsupport@twiik.me</p>
+                <h2>Do you have a code for TeamBoost?</h2>
+                <p>If you have received a code to join a TeamBoost, then you can create your account here on the web, fill
+                    in the code below and click "Proceed".</p>
+                <input type="text" placeholder="Enter your code here"> <input type="submit" value="Proceed">
             </div>
-
-            <form action="">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email address">
-                <textarea name="Message" placeholder="Message" cols="30" rows="4"></textarea>
-                 <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
-                <input type="submit" value="Send">
-            </form>
-        </div>
+            <div>
+                <h1>Create an account in the app!</h1>
+                <p>To be able to use Twiik you need to create an account in the app.</p>
+            </div>
+            <div>
+                <img src="https://kcdn.twiikapp.com/images/twiik_register.png" alt="">
+            </div>
+            <p>Get the app</p>
+            <div class="appbtns">
+                <div><a href="https://itunes.apple.com/se/app/twiik/id1022318229?ls=1&mt=8"><img
+                            src="https://kcdn.twiikapp.com/images/language/en/appstore_button.png" alt=""></a></div>
+                <div><a href="https://play.google.com/store/apps/details?id=me.twiik.twiikapp"><img
+                            src="https://kcdn.twiikapp.com/images/language/en/googleplay_button.png" alt=""></a></div>
+            </div>
     </div>
 
     <div class="footer">
@@ -84,10 +78,9 @@
             </div>
         </div>
     </div>
-
-</body>
-
-</html>
-
-<script src="index.js"></script>
-<script src="contact.js"></script>
+    
+    </body>
+    
+    </html>
+    
+    <script src="index.js"></script>
