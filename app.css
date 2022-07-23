@@ -14,8 +14,7 @@
     left: 0;
     width: 100%;
     z-index: 11000;
-    display: none;
-    transition: all 1s ease-in-out;
+    transition: all .2s ease-in-out;
   }
   
   /* form overlay */
@@ -28,9 +27,9 @@
   
   #form{
     width: 450px;
-    position: absolute; 
-    top: 50%;
-    left: 50%;
+    position: absolute;
+    top: var(--height); 
+    left: 50%; 
     transform: translate(-50%, -50%);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     z-index: 20000;
@@ -155,7 +154,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    z-index: 100000;
+    z-index: 10000;
     transition: all 0.2s ease-in-out;
 }
 
@@ -268,18 +267,18 @@ hr {
     width: 100%;
     position: relative;
     bottom: -250px;
-    height: 250px;
     background-color: #121451;
 }
 
-.fcontent {
+.fcontent{
     width: 73%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
+    padding-bottom: 40px;
     align-items: center;
-}
+  }
 
 .fright img {
     display: inline-block;
@@ -336,3 +335,86 @@ hr {
     height: 30px;
     width: 30px;
 }
+
+@media only screen and (max-width: 793px) {
+  
+    .nav a{
+      margin-right: 5px;
+      font-size: 14px;
+    }
+
+    .section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    } 
+
+    .left{
+        margin-top: 0;
+    }
+
+  }
+  
+  @media only screen and (max-width: 674px) {
+    
+    .nav > a:nth-child(2){
+      display: none;
+    }
+  
+    .left{
+      width: 80%;
+    }
+  
+    .nav a{
+      margin-right: 0;
+    }
+  
+    .fcontent{
+      width: 80%;
+    }
+  
+    #accbtn{
+      padding: 0 15px;
+    }
+
+    .section{
+        display: flex;
+        gap: 40px;
+    }
+
+    .section > div:nth-child(1){
+        max-width: 45%;
+    }
+
+    .fright{
+        display: grid;
+        grid-template-columns: repeat(3, 50px);
+        grid-template-rows: auto;
+        gap: 10px;
+      }
+
+    }
+  
+     @media only screen and (max-width: 474px) {
+  
+      #accbtn{
+        display: none;
+      }
+  
+      .fcontent{
+        width: 90%;
+      }
+      #form{
+        width: 320px;
+      }
+
+      .fright{
+        display: grid;
+        grid-template-columns: repeat(2, 50px);
+        grid-template-rows: auto;
+        gap: 10px;
+      }
+  
+      }

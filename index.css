@@ -14,8 +14,7 @@
   left: 0;
   width: 100%;
   z-index: 11000;
-  display: none;
-  transition: all 1s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 /* form overlay */
@@ -28,9 +27,9 @@
 
 #form{
   width: 450px;
-  position: absolute; 
-  top: 50%;
-  left: 50%;
+  position: absolute;
+  top: var(--height); 
+  left: 50%; 
   transform: translate(-50%, -50%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 20000;
@@ -214,8 +213,7 @@ a{
   background-attachment: fixed;
   padding: 75px 0px 50px;
   z-index: 0;
-  min-height: 65vh;
-  max-height: auto;  
+  min-height: 65vh; 
 } 
 .firstDesc{
   position: absolute;
@@ -224,6 +222,7 @@ a{
   left: 13%;
   z-index: 1000;
   color: white;
+  min-height: fit-content;
 }
 .firstDesc h1{
   font-size: 36px;
@@ -246,19 +245,22 @@ a{
  .section1, .section2, .section3, .section4{
   width: 100%;
   display: flex;
-  gap: 100px;
+  gap: 50px;
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
 }
 
 .section4 > div:nth-child(1){
-  width: 560px;
-  height: 620px;
+  width: 39.5%;
 }
 
-.section4 > div > img{
-  width: 100%;
+/* .section4 > div > img{
+  max-width: 100%;
+} */
+
+.section1 img, .section2 img, .section3 img, .section4 img{
+   max-width: 100%;
 }
 
 
@@ -273,7 +275,8 @@ a{
 }
 
 .left{
-  width: 32%;
+  width: 38%;
+  padding: 25px;
 }
 
 .conH1{
@@ -305,7 +308,6 @@ hr{
   width: 100%;
   position: relative;
   bottom: -550px;
-  height: 250px;
   background-color: #121451;
 }
 .fcontent{
@@ -314,8 +316,17 @@ hr{
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
+  padding-bottom: 40px;
   align-items: center;
 }
+
+.fright{
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
 .fright img{
   display: inline-block;
   width: 50px;
@@ -323,9 +334,7 @@ hr{
   transition: all 0.1s ease-in-out;
   margin-right: 15px;
 }
-.fright a:last-child img{
-  margin-right: 50px;
-}
+
 .fleft img{
   width: 150px;
   height: 50px;
@@ -359,12 +368,10 @@ ul li{
 }
 
 .icons{
-  display: block;
   height: 50px;
   width: 50px;
   border-radius: 50%;
   background-image: linear-gradient(to bottom, #5a3bdb, #75c6ec);
-  margin: 0px;
   padding: 10px;
   margin-right: 15px;
 }
@@ -386,3 +393,121 @@ ul li{
 .section2 > div:nth-child(1){
   margin-left: 40px;
 }
+
+
+@media only screen and (max-width: 960px) {
+.grid{
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+
+}
+
+@media only screen and (max-width: 793px) {
+
+  .section1, .section2, .section3, .section4{
+    gap: 20px;
+  }
+
+  .nav a{
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  .section5 {
+    width: 85%;
+  }
+
+  .section4 > div:nth-child(1){
+    width: 49.5%;
+  }
+
+  .fright{
+    display: grid;
+    grid-template-columns: repeat(2, 50px);
+    grid-template-rows: auto;
+  }
+}
+
+@media only screen and (max-width: 674px) {
+  
+  .nav > a:nth-child(2){
+    display: none;
+  }
+  
+  .wrapper{
+    top: 87vh;
+  }
+
+  .bkimage{
+    min-height: 85vh;
+  }
+
+  .left{
+    width: 80%;
+  }
+
+  .footer{
+    bottom: -700px;
+  }
+
+  .section5{
+    margin-top: 80px;
+  }
+
+  .grid{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .section4 > div:nth-child(1){
+    width: 69.5%;
+  }
+
+  .nav a{
+    margin-right: 0;
+  }
+
+  .fcontent{
+    width: 80%;
+  }
+
+  #accbtn{
+    padding: 0 15px;
+  }
+  }
+
+   @media only screen and (max-width: 474px) {
+    .section1, .section2, .section3, .section4{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section2 > div:nth-child(1){
+      margin-left: 0;
+    }
+
+    #accbtn{
+      display: none;
+    }
+
+    .fcontent{
+      width: 90%;
+    }
+
+    .bkimage{
+      min-height: 90vh;
+    }
+
+    .wrapper{
+      top: 92vh;
+    }
+    
+    #form{
+      width: 320px;
+    }
+
+    } 
+    
