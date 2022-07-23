@@ -5,6 +5,7 @@
     font-family: lato, Arial, Helvetica, sans-serif;
 }
 
+
 /* form overlay */
 
 #formoverlay{
@@ -13,8 +14,7 @@
     left: 0;
     width: 100%;
     z-index: 11000;
-    display: none;
-    transition: all 1s ease-in-out;
+    transition: all .2s ease-in-out;
   }
   
   /* form overlay */
@@ -27,9 +27,9 @@
   
   #form{
     width: 450px;
-    position: absolute; 
-    top: 50%;
-    left: 50%;
+    position: absolute;
+    top: var(--height); 
+    left: 50%; 
     transform: translate(-50%, -50%);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     z-index: 20000;
@@ -171,7 +171,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    z-index: 100000;
+    z-index: 10000;
     transition: all .2s ease-in-out;
     background-color: #26262C;
 }
@@ -228,11 +228,17 @@ a {
 
 .wrapper > div:nth-child(1){
     background: rgba(255,255,255,0.1);
+    width: 65%;
     padding: 30px;
     border-radius: 20px;
     margin-bottom: 75px;
     font-size: 15px;
 }
+
+.wrapper > div:nth-child(2){
+    width: 55%;
+}
+
 .wrapper > div:nth-child(1) h2{
     font-size: 36px;
     font-weight: normal;
@@ -267,6 +273,7 @@ input:focus, textarea:focus{
     text-align: center;
     cursor: pointer;
     font-weight: bold;
+    margin-left: 5px;
 }
 
 .wrapper input[type= "submit"]:hover{
@@ -288,19 +295,18 @@ input:focus, textarea:focus{
     width: 100%;
     position: relative;
     bottom: -330px;
-    height: 250px;
     background-color: #121451;
 }
 
-.fcontent {
-    width: 65%;
+.fcontent{
+    width: 73%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
+    padding-bottom: 40px;
     align-items: center;
-    border-top: 1px solid rgba(255,255,255,0.25);
-}
+  }
 
 .fright img {
     display: inline-block;
@@ -353,3 +359,89 @@ input:focus, textarea:focus{
     height: 30px;
     width: 30px;
 }
+
+@media only screen and (max-width: 793px) {
+  
+    .nav a{
+      margin-right: 5px;
+      font-size: 14px;
+    }
+
+    .wrapper > div:nth-child(1){
+        width: 85%;
+    }
+
+  }
+  
+  @media only screen and (max-width: 674px) {
+    
+    .nav > a:nth-child(2){
+      display: none;
+    }
+  
+    .nav a{
+      margin-right: 0;
+    }
+  
+    .fcontent{
+      width: 80%;
+    }
+  
+    #accbtn{
+      padding: 0 15px;
+    }
+
+    .fright{
+        display: grid;
+        grid-template-columns: repeat(3, 50px);
+        grid-template-rows: auto;
+        gap: 10px;
+      }
+
+    }
+
+    @media only screen and (max-width: 541px) {
+        .wrapper input[type= "submit"]{
+            margin-top: 10px;
+        }
+
+        .wrapper > div:nth-child(2){
+            width: 85%;
+        }
+
+        .wrapper > div:nth-child(3){
+            width: 80%;
+        }
+        .wrapper > div:nth-child(3) img{
+            width: 100%;
+        }
+    }
+
+  
+     @media only screen and (max-width: 474px) {
+  
+      #accbtn{
+        display: none;
+      }
+      .fcontent{
+        width: 90%;
+      }
+      #form{
+        width: 320px;
+      }
+
+      .section{
+        width: 100%;
+      }
+
+      .fright{
+        display: grid;
+        grid-template-columns: repeat(2, 50px);
+        grid-template-rows: auto;
+        gap: 10px;
+      }
+
+      .wrapper input[type = "text"]{
+        width: 100%;
+      }
+      }
